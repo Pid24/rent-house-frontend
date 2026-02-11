@@ -9,17 +9,20 @@ import React, { useMemo, useState } from "react";
 import moment from "moment";
 import { useCheckAvailabilityMutation } from "@/services/transaction.service";
 import { useToast } from "@/components/atomics/use-toast";
+import { useRouter } from "next/navigation";
 
 interface BookingSectionProps {
   id: number;
+  slug: string;
   price: number;
 }
 
-function BookingSection({ id, price }: BookingSectionProps) {
+function BookingSection({ id, slug, price }: BookingSectionProps) {
   const [startDate, setStartDate] = useState<Date>();
   const [endDate, setEndDate] = useState<Date>();
 
   const { toast } = useToast();
+  const router = useRouter();
   const [checkAvailability, { isLoading }] = useCheckAvailabilityMutation();
 
   const booking = useMemo(() => {
@@ -48,7 +51,9 @@ function BookingSection({ id, price }: BookingSectionProps) {
       };
 
       const res = await checkAvailability(data).unwrap();
-      console.log("🚀 ~ handleBook ~ res:", res);
+      if (res.success) {
+        router.push(`/listing/${slug}/checkout?start_date=${data.start_date}&end_date=${data.end_date}`);
+      }
     } catch (error: any) {
       if (error.status === 401) {
         toast({

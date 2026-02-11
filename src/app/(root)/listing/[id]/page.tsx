@@ -89,7 +89,7 @@ function Detail({ params }: { params: { id: string } }) {
           <Map />
           <CustomerReviews />
         </div>
-        {listing && <BookingSection id={listing?.id} price={listing?.price_per_day} />}
+        {listing && <BookingSection id={listing?.id} slug={listing?.slug} price={listing?.price_per_day} />}
       </section>
 
       <ListingShowcase id="deals-section" title="Similar Places" subtitle="Beauty in comparison of models" />
