@@ -106,9 +106,9 @@ function Checkout({ params }: { params: { id: string } }) {
                   <Image src="/icons/visa.svg" alt="visa" height={0} width={0} className="h-full w-auto" />
                 </Button>
               </div>
-              <CardBooking title="Bank Name" value="BuildWithAngga Fi" />
-              <CardBooking title="Bank Account" value="Nidejia Listings" />
-              <CardBooking title="Number" value="20193050" />
+              <CardBooking title="Bank Name" value="BNI" />
+              <CardBooking title="Bank Account" value="YSS" />
+              <CardBooking title="Number" value="31204161" />
               <Separator className="bg-border" />
               <div className="flex items-center space-x-2">
                 <Checkbox id="terms" />

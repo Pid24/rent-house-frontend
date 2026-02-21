@@ -95,7 +95,7 @@ function BookingSection({ id, slug, price }: BookingSectionProps) {
       <div className="bg-gray-light p-5 rounded-[20px] flex items-center space-x-4">
         <Image src="/icons/medal-star.svg" alt="icon" height={36} width={36} />
         <div>
-          <Title section="booking" title="77% Off Discount" subtitle="BuildWithAngga card is giving you extra priviledge today." />
+          <Title section="booking" title="70% Off Discount" subtitle="RentHouse card is giving you extra priviledge today." />
         </div>
       </div>
     </div>

@@ -14,7 +14,10 @@ function Header() {
     <header className="container mx-auto fixed inset-x-0 top-[30px] z-20">
       <div className="p-[30px] rounded-[30px] bg-white flex justify-between items-center">
         <Link href="/">
-          <Image src="/images/logo.svg" alt="nidejia" height={36} width={133} />
+          {/* <Image src="/images/logo.svg" alt="nidejia" height={36} width={133} /> */}
+          <span className="text-[28px] font-extrabold tracking-tight text-primary">
+            RentHouse<span className="text-black">.</span>
+          </span>
         </Link>
 
         <nav>
